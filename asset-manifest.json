@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Book/static/css/main.f8567a6e.css",
+    "main.js": "/Book/static/js/main.c5dc92eb.js",
+    "static/media/card1.jpg": "/Book/static/media/card1.95650519f12136589fdd.jpg",
+    "static/media/maim-logo.svg": "/Book/static/media/maim-logo.7c5e8edb5f55dd4eaf4e9abd0db1e311.svg",
+    "static/media/switcher.svg": "/Book/static/media/switcher.cb23eceee49b38dadb2ad5e7edea46fa.svg",
+    "static/media/cart.svg": "/Book/static/media/cart.6e31177a49d69a27d92086d7d568dc41.svg",
+    "index.html": "/Book/index.html",
+    "static/media/align-left.svg": "/Book/static/media/align-left.c74de5d085f9e00551dfa1fa529e0a72.svg",
+    "static/media/user.svg": "/Book/static/media/user.754538509c2a5f738cd66ceaee36779b.svg",
+    "static/media/fi-ss-caret-down.svg": "/Book/static/media/fi-ss-caret-down.276f2dfde31543873a05b5c4ed0e6f93.svg",
+    "main.f8567a6e.css.map": "/Book/static/css/main.f8567a6e.css.map",
+    "main.c5dc92eb.js.map": "/Book/static/js/main.c5dc92eb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f8567a6e.css",
+    "static/js/main.c5dc92eb.js"
+  ]
+}
