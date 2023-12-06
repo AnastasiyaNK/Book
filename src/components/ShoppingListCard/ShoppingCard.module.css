@@ -1,0 +1,130 @@
+.shoppListContainer {
+  margin-left: 40px;
+}
+.shoppListMainTitle {
+  color: #111;
+
+  font-family: DM Sans;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -1.92px;
+  margin-bottom: 40px;
+}
+.accentedWord {
+  color: #4f2ee8;
+}
+
+.mainShopcontainer {
+  display: flex;
+  width: 100%;
+  /* width: 996px; */
+  min-height: 213px;
+  padding: 30px 24px;
+  align-items: flex-start;
+  gap: 48px;
+  position: relative;
+
+  border-radius: 16px;
+  border: 2px solid rgba(79, 46, 232, 0.4);
+
+  background: #fff;
+  margin-bottom: 20px;
+}
+.secondShopcontainer {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.closeShop {
+  position: absolute;
+  top: 24px;
+  right: 10px;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.bookCover {
+  height: 150px;
+}
+.wrapperShop {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+}
+.mainTitleShop {
+  color: #111;
+  font-size: 16px;
+
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.genreShop {
+  color: #b4afaf;
+  font-size: 12px;
+
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: 0.36px;
+  margin-bottom: 14px;
+}
+.textShop {
+  color: #111;
+  font-size: 14px;
+
+  font-weight: 400;
+  line-height: 1.28;
+  letter-spacing: -0.56px;
+  margin-bottom: 28px;
+}
+.autorShop {
+  color: #b4afaf;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: -0.48px;
+}
+.autorIconWrapper {
+  display: flex;
+
+  align-items: flex-end;
+}
+.iconBook {
+  margin-left: auto;
+}
+
+.someBook {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  width: 350px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 0 auto;
+}
+
+.textSomeBook {
+  color: rgba(0, 0, 0, 0.6);
+
+  text-align: center;
+  font-size: 18px;
+
+  font-weight: 400;
+  line-height: 1.33;
+  letter-spacing: -0.36px;
+  align-items: center;
+}
+.iconWrapper {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}

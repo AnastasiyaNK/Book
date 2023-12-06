@@ -16,6 +16,7 @@ export const App = () => {
       <HeaderNav />
       <div className={css.bodyContainer}>
         <AllCategoryList />
+
         <Routes>
           <Route path={RoutesPaths.HOME_ROUTE} element={<HomePage />} />
           <Route

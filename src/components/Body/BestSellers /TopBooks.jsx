@@ -1,11 +1,30 @@
-import React from 'react';
-import card1 from '../../../imeg/card1.jpg';
+import React, { useEffect } from 'react';
 
 import css from '../BestSellers /TopBooks.module.css';
+import {
+  selectTopBook,
+  selectTopBookError,
+  selectTopBookIsLoading,
+} from 'redux/bookShelf.selectors';
+import { useDispatch, useSelector } from 'react-redux';
+import { ThreeDots } from 'react-loader-spinner';
+import { fetchTopBooks } from 'redux/bookShelfSlice';
 
 // import css from './TopBooks.module.css';
 
 const TopBooks = () => {
+  const topBooks = useSelector(selectTopBook);
+  const booksIsLoading = useSelector(selectTopBookIsLoading);
+  const booksError = useSelector(selectTopBookError);
+
+  console.log(topBooks);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchTopBooks());
+  }, [dispatch]);
+
   const title = 'Best Sellers Books';
   const splitedTitle = title.split(' '); // ["Best", "Sellers", "Books"]
 
@@ -14,87 +33,51 @@ const TopBooks = () => {
 
   return (
     <div className={css.topBookContainer}>
+      {booksError && <p>{booksError}</p>}
+      {booksIsLoading && (
+        <div className={css.loaderWrapper}>
+          <ThreeDots
+            height="55"
+            width="55"
+            radius="9"
+            color="#4fa94d"
+            ariaLabel="three-dots-loading"
+            wrapperStyle={{}}
+            wrapperClassName=""
+            visible={true}
+          />
+        </div>
+      )}
       <h1 className={css.topBookMainTitle}>
         {shortenTitle} <span>{accentedWord}</span>
       </h1>
-      <div className={css.topBookSection}>
-        <h2 className={css.topBookTitle}>Combined Print and E-Book Fiction</h2>
-        <ul className={css.bookList}>
-          <li className={css.bookItem}>
-            <img className={css.bookCover} src={card1} alt="Avatar" />
+      {topBooks?.map(({ list_name, books }) => {
+        return (
+          <div key={list_name} className={css.topBookSection}>
+            <h2 className={css.topBookTitle}>{list_name}</h2>
+            <ul className={css.bookList}>
+              {books.map(({ book_image, author, title, _id }) => {
+                return (
+                  <li key={_id} className={css.bookItem}>
+                    <img
+                      className={css.bookCover}
+                      src={book_image}
+                      alt={title}
+                    />
 
-            <h3 className={css.bookName}>I will find you</h3>
-            <p className={css.bookAutor}>Harlan Coben</p>
-          </li>
-          <li className={css.bookItem}>
-            <img className={css.bookCover} src={card1} alt="Avatar" />
+                    <h3 className={css.bookName}>{title}</h3>
+                    <p className={css.bookAutor}>{author}</p>
+                  </li>
+                );
+              })}
+            </ul>
 
-            <h3 className={css.bookName}>I will find you</h3>
-            <p className={css.bookAutor}>Harlan Coben</p>
-          </li>
-          <li className={css.bookItem}>
-            <img className={css.bookCover} src={card1} alt="Avatar" />
-
-            <h3 className={css.bookName}>I will find you</h3>
-            <p className={css.bookAutor}>Harlan Coben</p>
-          </li>
-          <li className={css.bookItem}>
-            <img className={css.bookCover} src={card1} alt="Avatar" />
-
-            <h3 className={css.bookName}>I will find you</h3>
-            <p className={css.bookAutor}>Harlan Coben</p>
-          </li>
-          <li className={css.bookItem}>
-            <img className={css.bookCover} src={card1} alt="Avatar" />
-
-            <h3 className={css.bookName}>I will find you</h3>
-            <p className={css.bookAutor}>Harlan Coben</p>
-          </li>
-        </ul>
-
-        <button className={css.btnSeeMore} type="button">
-          SEE MORE
-        </button>
-      </div>
-      <div className={css.topBookSection}>
-        <h2 className={css.topBookTitle}>Combined Print and E-Book Fiction</h2>
-        <ul className={css.bookList}>
-          <li className={css.bookItem}>
-            <img className={css.bookCover} src={card1} alt="Avatar" />
-
-            <h3 className={css.bookName}>I will find you</h3>
-            <p className={css.bookAutor}>Harlan Coben</p>
-          </li>
-          <li className={css.bookItem}>
-            <img className={css.bookCover} src={card1} alt="Avatar" />
-
-            <h3 className={css.bookName}>I will find you</h3>
-            <p className={css.bookAutor}>Harlan Coben</p>
-          </li>
-          <li className={css.bookItem}>
-            <img className={css.bookCover} src={card1} alt="Avatar" />
-
-            <h3 className={css.bookName}>I will find you</h3>
-            <p className={css.bookAutor}>Harlan Coben</p>
-          </li>
-          <li className={css.bookItem}>
-            <img className={css.bookCover} src={card1} alt="Avatar" />
-
-            <h3 className={css.bookName}>I will find you</h3>
-            <p className={css.bookAutor}>Harlan Coben</p>
-          </li>
-          <li className={css.bookItem}>
-            <img className={css.bookCover} src={card1} alt="Avatar" />
-
-            <h3 className={css.bookName}>I will find you</h3>
-            <p className={css.bookAutor}>Harlan Coben</p>
-          </li>
-        </ul>
-
-        <button className={css.btnSeeMore} type="button">
-          SEE MORE
-        </button>
-      </div>
+            <button className={css.btnSeeMore} type="button">
+              SEE MORE
+            </button>
+          </div>
+        );
+      })}
     </div>
   );
 };

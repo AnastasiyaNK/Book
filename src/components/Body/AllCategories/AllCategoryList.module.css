@@ -5,6 +5,16 @@
   overflow: hidden;
   overflow-y: scroll;
 }
+.outerWrapper {
+  position: relative;
+}
+.loaderWrapper {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
 
 .allCategoryList {
   color: rgba(17, 17, 17, 0.6);
@@ -15,4 +25,25 @@
   line-height: 24px; /* 133.333% */
   letter-spacing: -0.36px;
   list-style: none;
+}
+
+.homeLink {
+  color: rgba(17, 17, 17, 0.6);
+  font-size: 18px;
+  margin-bottom: 32px;
+
+  font-weight: 400;
+  line-height: 1.33; /* 133.333% */
+  letter-spacing: -0.36px;
+
+  display: block;
+
+  text-decoration: none;
+
+  transition: all 0.3s;
+}
+.homeLink.active {
+  color: #4f2ee8;
+  font-weight: 700;
+  text-transform: uppercase;
 }
