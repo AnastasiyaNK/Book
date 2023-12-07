@@ -1,3 +1,14 @@
+body.light {
+  --accent: violet;
+  --black: black;
+  --white: white;
+}
+body.dark {
+  --accent: yellow;
+  --black: #fff;
+  --white: black;
+}
+
 p,
 h1,
 h2,

@@ -1,5 +1,5 @@
 import CardBook from 'components/CategoriesByGenre/CardBook';
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { ThreeDots } from 'react-loader-spinner';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
@@ -17,6 +17,7 @@ import { openModal } from 'redux/modalSlice';
 const CategoryPage = () => {
   const dispatch = useDispatch();
   const { categoryId } = useParams();
+  const headingRef = useRef(null);
 
   const booksByCategory = useSelector(selectByCategory);
   const booksIsLoading = useSelector(selectByCategoryIsLoading);
@@ -31,9 +32,19 @@ const CategoryPage = () => {
   useEffect(() => {
     dispatch(fetchBookByCategory(categoryId));
   }, [dispatch, categoryId]);
+
+  useEffect(() => {
+    if (!booksByCategory) return;
+    headingRef.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  }, [booksByCategory]);
+
   const onOpenModal = bookId => {
     dispatch(openModal(bookId));
   };
+
   return (
     <div className={css.categoryPage}>
       {booksError && <p>{booksError}</p>}
@@ -53,7 +64,7 @@ const CategoryPage = () => {
       )}
 
       <div className={css.cardBookContainer}>
-        <h1 className={css.mainTitle}>
+        <h1 ref={headingRef} className={css.mainTitle}>
           {shortenTitle}{' '}
           <span className={css.accentedWord}>{accentedWord}</span>
         </h1>

@@ -61,17 +61,31 @@
 }
 
 .btnSeeMore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   border-radius: 40px;
   border: 2px solid #4f2ee8;
-  padding: 14px 28px;
+  padding: 14px 5px;
   margin-left: auto;
   display: block;
+  text-decoration: none;
+  max-width: 124px;
 
   color: #111;
   font-size: 14px;
 
   font-weight: 700;
-  line-height: 18px; /* 128.571% */
+  line-height: 1.28;
   letter-spacing: -0.14px;
   text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.btnSeeMore:hover,
+.btnSeeMore:focus,
+.btnSeeMore:active {
+  background: #4f2ee8;
+  color: #fff;
 }

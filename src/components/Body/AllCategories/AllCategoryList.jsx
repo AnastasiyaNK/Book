@@ -9,6 +9,8 @@ import {
 } from 'redux/bookShelf.selectors';
 import { ThreeDots } from 'react-loader-spinner';
 import { NavLink, useLocation } from 'react-router-dom';
+import { HOME_ROUTE } from 'helpers/constants';
+import cn from 'classnames';
 
 const AllCategoryList = () => {
   const dispatch = useDispatch();
@@ -42,15 +44,27 @@ const AllCategoryList = () => {
       )}
       <div className={css.allCategoryContainer}>
         <ul className={css.allCategoryItem}>
-          <li className={`${css.homeLink} ${isHomePage ? css.active : ''}`}>
-            All categories
+          <li
+            className={cn(css.homeLink, {
+              [css.active]: isHomePage,
+            })}
+          >
+            <NavLink
+              className={({ isActive }) =>
+                cn(css.homeLink, { [css.active]: isActive })
+              }
+              to={HOME_ROUTE}
+            >
+              All categories
+            </NavLink>
           </li>
+
           {allCategories.map(({ list_name }, index) => {
             return (
               <li key={index} className={css.allCategoryList}>
                 <NavLink
                   className={({ isActive }) =>
-                    `${css['homeLink']} ${isActive ? css.active : ''}`
+                    cn(css.homeLink, { [css.active]: isActive })
                   }
                   to={`/category/${list_name}`}
                 >

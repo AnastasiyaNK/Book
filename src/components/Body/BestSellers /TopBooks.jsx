@@ -9,6 +9,7 @@ import {
 import { useDispatch, useSelector } from 'react-redux';
 import { ThreeDots } from 'react-loader-spinner';
 import { fetchTopBooks } from 'redux/bookShelfSlice';
+import { Link } from 'react-router-dom';
 
 // import css from './TopBooks.module.css';
 
@@ -72,9 +73,13 @@ const TopBooks = () => {
               })}
             </ul>
 
-            <button className={css.btnSeeMore} type="button">
+            <Link
+              to={`/category/${list_name}`}
+              className={css.btnSeeMore}
+              type="button"
+            >
               SEE MORE
-            </button>
+            </Link>
           </div>
         );
       })}

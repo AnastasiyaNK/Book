@@ -3,6 +3,8 @@ import css from './ShoppingCard.module.css';
 import { ReactComponent as Dump } from 'assets/images/icons/dump.svg';
 import imgBook from 'assets/images/icons/notes.png';
 import imgAmazone from 'assets/images/icons/amazone.png';
+import { useDispatch } from 'react-redux';
+import { removeShoppingListItem } from 'redux/shoppingListSlice';
 
 const ShoppingListCard = ({
   title,
@@ -13,10 +15,18 @@ const ShoppingListCard = ({
   bookImage,
   listName,
 }) => {
+  const dispatch = useDispatch();
+
+  const onRemoveCard = () => {
+    dispatch(removeShoppingListItem(_id));
+  };
   return (
     <div>
       <div className={css.mainShopcontainer}>
-        <Dump className={css.closeShop} />
+        <button onClick={onRemoveCard} className={css.closeShop}>
+          <Dump />
+        </button>
+
         <div className={css.secondShopcontainer}>
           <img className={css.bookCover} src={bookImage} alt={title} />
           <div className={css.wrapperShop}>

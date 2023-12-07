@@ -14,9 +14,13 @@ import {
   selectBookDetails,
   selectCardId,
   selectOpenModal,
+  selectShoppingList,
 } from 'redux/bookShelf.selectors';
 import { closeModal, fetchBookById } from 'redux/modalSlice';
-import { addShoppingListItem } from 'redux/shoppingListSlice';
+import {
+  addShoppingListItem,
+  removeShoppingListItem,
+} from 'redux/shoppingListSlice';
 
 const getBuyLinkImg = {
   Amazon: imgAmazone,
@@ -32,17 +36,28 @@ const PopUpModal = () => {
   const open = useSelector(selectOpenModal);
   const selectedCardId = useSelector(selectCardId);
   const bookDetails = useSelector(selectBookDetails);
+  const shoppingList = useSelector(selectShoppingList);
+  const isAddedToShoppingList = shoppingList.some(
+    el => el._id === bookDetails?._id
+  );
 
   console.log(bookDetails);
+  console.log(shoppingList);
 
   const onClose = () => {
     dispatch(closeModal());
   };
 
-  const toggleShopingList = () => {
+  const addShopingList = () => {
     if (!bookDetails) return;
 
     dispatch(addShoppingListItem(bookDetails));
+  };
+
+  const removeShopingList = () => {
+    if (!bookDetails) return;
+
+    dispatch(removeShoppingListItem(bookDetails._id));
   };
 
   useEffect(() => {
@@ -93,9 +108,21 @@ const PopUpModal = () => {
             </div>
           </div>
           <div>
-            <button className={css.btnPopUp} onClick={toggleShopingList}>
-              Add to shopping list
-            </button>
+            {isAddedToShoppingList ? (
+              <div>
+                <button className={css.btnPopUp} onClick={removeShopingList}>
+                  remove from the shopping list
+                </button>
+                <p>
+                  Сongratulations! You have added the book to the shopping list.
+                  To delete, press the button “Remove from the shopping list”.
+                </p>
+              </div>
+            ) : (
+              <button className={css.btnPopUp} onClick={addShopingList}>
+                Add to shopping list
+              </button>
+            )}
           </div>
         </div>
       )}

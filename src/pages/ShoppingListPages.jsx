@@ -3,7 +3,7 @@ import React from 'react';
 import css from '../components/ShoppingListCard/ShoppingCard.module.css';
 import { useSelector } from 'react-redux';
 import { selectShoppingList } from 'redux/bookShelf.selectors';
-// import { ReactComponent as ImgShopping } from 'assets/images/icons/imgshopping.svg';
+import { ReactComponent as ImgShopping } from 'assets/images/icons/imgshopping.svg';
 
 const ShoppingListPages = () => {
   const shoppingList = useSelector(selectShoppingList);
@@ -13,13 +13,14 @@ const ShoppingListPages = () => {
       <h1 className={css.shoppListMainTitle}>
         Shopping <span className={css.accentedWord}>List</span>
       </h1>
-
-      {/* <div className={css.someBook}>
-        <p className={css.textSomeBook}>
-          This page is empty, add some books and proceed to order.
-        </p>
-        <ImgShopping />
-      </div> */}
+      {!shoppingList.length && (
+        <div className={css.someBook}>
+          <p className={css.textSomeBook}>
+            This page is empty, add some books and proceed to order.
+          </p>
+          <ImgShopping />
+        </div>
+      )}
       {shoppingList.map(
         ({
           title,
