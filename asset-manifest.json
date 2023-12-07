@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "./static/css/main.13e4958a.css",
-    "main.js": "./static/js/main.f67d8be8.js",
+    "main.css": "./static/css/main.6407fff5.css",
+    "main.js": "./static/js/main.b344b405.js",
+    "static/media/imgshopping.svg": "./static/media/imgshopping.be76b4925fb9f36c5615de9db075c98f.svg",
     "static/media/indiebound.svg": "./static/media/indiebound.9c70a59c39005b5b4f659c157bb7f3ab.svg",
     "static/media/mb.svg": "./static/media/mb.88d7156197da89e9f31aa854ab6e3567.svg",
     "static/media/maim-logo.svg": "./static/media/maim-logo.7c5e8edb5f55dd4eaf4e9abd0db1e311.svg",
     "static/media/switcher.svg": "./static/media/switcher.cb23eceee49b38dadb2ad5e7edea46fa.svg",
     "static/media/cart.svg": "./static/media/cart.6e31177a49d69a27d92086d7d568dc41.svg",
     "index.html": "./index.html",
+    "static/media/scrol.svg": "./static/media/scrol.99e7bb59a3b5f5c7926176b2b1ee8a20.svg",
     "static/media/barnesandnoble-icon.svg": "./static/media/barnesandnoble-icon.0e388cde157e7a9c0bf0128e9d7859c3.svg",
     "static/media/dump.svg": "./static/media/dump.8f73d5d76157bed4dbe4217d62e63974.svg",
     "static/media/align-left.svg": "./static/media/align-left.c74de5d085f9e00551dfa1fa529e0a72.svg",
@@ -15,11 +17,11 @@
     "static/media/icons8-ibooks.svg": "./static/media/icons8-ibooks.da7f077d62773198596f2ced1366adee.svg",
     "static/media/fi-ss-caret-down.svg": "./static/media/fi-ss-caret-down.276f2dfde31543873a05b5c4ed0e6f93.svg",
     "static/media/x-close.svg": "./static/media/x-close.a2c34c6916cfabe2420cb21d85374c20.svg",
-    "main.13e4958a.css.map": "./static/css/main.13e4958a.css.map",
-    "main.f67d8be8.js.map": "./static/js/main.f67d8be8.js.map"
+    "main.6407fff5.css.map": "./static/css/main.6407fff5.css.map",
+    "main.b344b405.js.map": "./static/js/main.b344b405.js.map"
   },
   "entrypoints": [
-    "static/css/main.13e4958a.css",
-    "static/js/main.f67d8be8.js"
+    "static/css/main.6407fff5.css",
+    "static/js/main.b344b405.js"
   ]
 }
