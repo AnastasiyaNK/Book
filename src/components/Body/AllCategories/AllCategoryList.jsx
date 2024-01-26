@@ -31,10 +31,10 @@ const AllCategoryList = () => {
       {categoriesIsLoading && (
         <div className={css.loaderWrapper}>
           <ThreeDots
-            height="55"
+            height="40"
             width="55"
-            radius="9"
-            color="#4fa94d"
+            radius="5"
+            color="#4f2ee8"
             ariaLabel="three-dots-loading"
             wrapperStyle={{}}
             wrapperClassName=""

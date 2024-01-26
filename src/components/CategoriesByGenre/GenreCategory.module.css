@@ -6,7 +6,7 @@
 }
 
 .mainTitle {
-  color: #111;
+  color: var(--black);
 
   font-family: DM Sans;
   font-size: 48px;
@@ -17,7 +17,7 @@
   margin-bottom: 40px;
 }
 .accentedWord {
-  color: #4f2ee8;
+  color: var(--violet);
 }
 
 .loaderWrapper {
@@ -68,7 +68,7 @@
 } */
 
 .bookName {
-  color: #111;
+  color: var(--black);
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
@@ -77,7 +77,7 @@
   margin-top: 14px;
 }
 .bookAutor {
-  color: #b4afaf;
+  color: var(--grey);
   font-size: 12px;
   font-style: italic;
   font-weight: 400;

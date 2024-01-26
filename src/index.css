@@ -1,12 +1,26 @@
 body.light {
-  --accent: violet;
-  --black: black;
+  --accent: #4f2ee8;
+  --black: #111;
+  --black-40: rgba(17, 17, 17, 0.4);
+  --black-50: rgba(17, 17, 17, 0.5);
+  --black-60: rgba(17, 17, 17, 0.6);
+  --grey: #b4afaf;
   --white: white;
+  --white-800: #fff;
+  --yellow: #eac645;
+  --violet: #4f2ee8;
 }
 body.dark {
-  --accent: yellow;
+  --accent: #eac645;
   --black: #fff;
-  --white: black;
+  --black-40: rgba(17, 17, 17, 0.4);
+  --black-50: rgba(255, 255, 255, 0.5);
+  --black-60: rgba(255, 255, 255, 0.6);
+  --white: #111;
+  --yellow: #eac645;
+  --violet: #4f2ee8;
+  --grey: #b4afaf;
+  --white-800: #202024;
 }
 
 p,

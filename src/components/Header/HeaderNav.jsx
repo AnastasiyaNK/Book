@@ -1,24 +1,18 @@
-import React, { useEffect, useState } from 'react';
 import css from './Header.module.css';
 
 import { ReactComponent as MainLogo } from 'assets/images/icons/maim-logo.svg';
 
 import { ReactComponent as Burger } from 'assets/images/icons/align-left.svg';
-import { ReactComponent as Switcher } from 'assets/images/icons/switcher.svg';
+
 import { ReactComponent as UserIcon } from 'assets/images/icons/user.svg';
 import { ReactComponent as Dropdown } from 'assets/images/icons/fi-ss-caret-down.svg';
 import { ReactComponent as Cart } from 'assets/images/icons/cart.svg';
 import { NavLink } from 'react-router-dom';
 import * as Routes from 'helpers/constants';
 import cn from 'classnames';
+import ThemeToggle from 'components/ThemeToggle/ThemeToggle';
 
 const HeaderNav = () => {
-  const [theme, setTheme] = useState('light'); // 'light'| 'dark'
-
-  useEffect(() => {
-    document.body.className = theme;
-  }, [theme]);
-
   return (
     <header className={css.header}>
       <div className={css.headerContainer}>
@@ -50,12 +44,7 @@ const HeaderNav = () => {
         </nav>
 
         <div className={css.headerUserDrop}>
-          <button
-            className={css.test}
-            onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-          >
-            <Switcher />
-          </button>
+          <ThemeToggle />
 
           <Burger className={css.headerBurger} />
           <button className={css.headerUserBtn}>

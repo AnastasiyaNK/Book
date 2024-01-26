@@ -41,9 +41,6 @@ const PopUpModal = () => {
     el => el._id === bookDetails?._id
   );
 
-  console.log(bookDetails);
-  console.log(shoppingList);
-
   const onClose = () => {
     dispatch(closeModal());
   };
@@ -71,7 +68,9 @@ const PopUpModal = () => {
     <div className={css.overlay}>
       {bookDetails !== null && (
         <div className={css.mainPopUpcontainer}>
-          <Close onClick={onClose} className={css.closeModal} />
+          <button onClick={onClose} className={css.closseModalBtn}>
+            <Close className={css.closeModal} />
+          </button>
 
           <div className={css.secondPopUpcontainer}>
             <img
@@ -113,7 +112,7 @@ const PopUpModal = () => {
                 <button className={css.btnPopUp} onClick={removeShopingList}>
                   remove from the shopping list
                 </button>
-                <p>
+                <p className={css.congratulations}>
                   Сongratulations! You have added the book to the shopping list.
                   To delete, press the button “Remove from the shopping list”.
                 </p>

@@ -7,20 +7,24 @@ import {
   selectTopBookIsLoading,
 } from 'redux/bookShelf.selectors';
 import { useDispatch, useSelector } from 'react-redux';
-import { ThreeDots } from 'react-loader-spinner';
+// import { ThreeDots } from 'react-loader-spinner';
 import { fetchTopBooks } from 'redux/bookShelfSlice';
 import { Link } from 'react-router-dom';
-
-// import css from './TopBooks.module.css';
+import { openModal } from 'redux/modalSlice';
+import CardBook from 'components/CategoriesByGenre/CardBook';
+import PopUpModal from 'components/Modal/PopUpModal';
 
 const TopBooks = () => {
+  const dispatch = useDispatch();
   const topBooks = useSelector(selectTopBook);
   const booksIsLoading = useSelector(selectTopBookIsLoading);
   const booksError = useSelector(selectTopBookError);
 
   console.log(topBooks);
 
-  const dispatch = useDispatch();
+  const onOpenModal = bookId => {
+    dispatch(openModal(bookId));
+  };
 
   useEffect(() => {
     dispatch(fetchTopBooks());
@@ -37,7 +41,7 @@ const TopBooks = () => {
       {booksError && <p>{booksError}</p>}
       {booksIsLoading && (
         <div className={css.loaderWrapper}>
-          <ThreeDots
+          {/* <ThreeDots
             height="55"
             width="55"
             radius="9"
@@ -46,7 +50,7 @@ const TopBooks = () => {
             wrapperStyle={{}}
             wrapperClassName=""
             visible={true}
-          />
+          /> */}
         </div>
       )}
       <h1 className={css.topBookMainTitle}>
@@ -59,16 +63,24 @@ const TopBooks = () => {
             <ul className={css.bookList}>
               {books.map(({ book_image, author, title, _id }) => {
                 return (
-                  <li key={_id} className={css.bookItem}>
-                    <img
-                      className={css.bookCover}
-                      src={book_image}
-                      alt={title}
-                    />
+                  <CardBook
+                    onClick={onOpenModal}
+                    key={_id}
+                    bookImage={book_image}
+                    author={author}
+                    title={title}
+                    _id={_id}
+                  />
+                  // <li key={_id} className={css.bookItem}>
+                  //   <img
+                  //     className={css.bookCover}
+                  //     src={book_image}
+                  //     alt={title}
+                  //   />
 
-                    <h3 className={css.bookName}>{title}</h3>
-                    <p className={css.bookAutor}>{author}</p>
-                  </li>
+                  //   <h3 className={css.bookName}>{title}</h3>
+                  //   <p className={css.bookAutor}>{author}</p>
+                  // </li>
                 );
               })}
             </ul>
@@ -83,6 +95,7 @@ const TopBooks = () => {
           </div>
         );
       })}
+      <PopUpModal />
     </div>
   );
 };

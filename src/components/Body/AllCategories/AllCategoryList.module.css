@@ -18,7 +18,6 @@
 }
 
 .allCategoryList {
-  color: rgba(17, 17, 17, 0.6);
   font-size: 18px;
   margin-bottom: 32px;
 
@@ -29,7 +28,7 @@
 }
 
 .homeLink {
-  color: rgba(17, 17, 17, 0.6);
+  color: var(--black-60);
   font-size: 18px;
   margin-bottom: 32px;
 
@@ -44,7 +43,8 @@
   transition: all 0.3s;
 }
 .homeLink.active {
-  color: #4f2ee8;
+  color: var(--accent);
+
   font-weight: 700;
   text-transform: uppercase;
 }

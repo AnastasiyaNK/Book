@@ -3,7 +3,7 @@
   width: 100%;
 }
 .shoppListMainTitle {
-  color: #111;
+  color: var(--black);
 
   font-family: DM Sans;
   font-size: 48px;
@@ -14,13 +14,13 @@
   margin-bottom: 40px;
 }
 .accentedWord {
-  color: #4f2ee8;
+  color: var(--violet);
 }
 
 .mainShopcontainer {
   display: flex;
   width: 100%;
-  /* width: 996px; */
+
   min-height: 213px;
   padding: 30px 24px;
   align-items: flex-start;
@@ -30,12 +30,12 @@
   border-radius: 16px;
   border: 2px solid rgba(79, 46, 232, 0.4);
 
-  background: #fff;
+  background: var(--white);
   margin-bottom: 20px;
 }
 .secondShopcontainer {
   display: flex;
-  /* justify-content: space-between; */
+  width: 100%;
 }
 
 .closeShop {
@@ -55,9 +55,10 @@
   display: flex;
   flex-direction: column;
   margin-left: 25px;
+  width: 100%;
 }
 .mainTitleShop {
-  color: #111;
+  color: var(--black);
   font-size: 16px;
 
   font-weight: 700;
@@ -67,7 +68,7 @@
   margin-bottom: 4px;
 }
 .genreShop {
-  color: #b4afaf;
+  color: var(--grey);
   font-size: 12px;
 
   font-weight: 400;
@@ -76,7 +77,7 @@
   margin-bottom: 14px;
 }
 .textShop {
-  color: #111;
+  color: var(--black);
   font-size: 14px;
 
   font-weight: 400;
@@ -85,7 +86,7 @@
   margin-bottom: 28px;
 }
 .autorShop {
-  color: #b4afaf;
+  color: var(--grey);
   font-size: 12px;
   font-style: italic;
   font-weight: 400;
@@ -112,7 +113,7 @@
 }
 
 .textSomeBook {
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--grey);
 
   max-width: 350px;
 

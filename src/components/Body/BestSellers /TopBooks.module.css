@@ -3,7 +3,7 @@
 }
 
 .topBookMainTitle {
-  color: #111;
+  color: var(--black);
 
   font-family: DM Sans;
   font-size: 48px;
@@ -14,11 +14,15 @@
   margin-bottom: 40px;
 }
 
+.topBookMainTitle span {
+  color: var(--violet);
+}
+
 .topBookSection {
   margin-bottom: 40px;
 }
 .topBookTitle {
-  color: #b4afaf;
+  color: var(--grey);
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
@@ -42,7 +46,7 @@
   height: 250px;
 }
 .bookName {
-  color: #111;
+  color: var(--black);
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
@@ -51,7 +55,7 @@
   margin-top: 14px;
 }
 .bookAutor {
-  color: #b4afaf;
+  color: var(--grey);
   font-size: 12px;
   font-style: italic;
   font-weight: 400;
@@ -66,14 +70,14 @@
   align-items: center;
   text-align: center;
   border-radius: 40px;
-  border: 2px solid #4f2ee8;
+  border: 2px solid var(--accent);
   padding: 14px 5px;
   margin-left: auto;
   display: block;
   text-decoration: none;
   max-width: 124px;
 
-  color: #111;
+  color: var(--black);
   font-size: 14px;
 
   font-weight: 700;
@@ -86,6 +90,6 @@
 .btnSeeMore:hover,
 .btnSeeMore:focus,
 .btnSeeMore:active {
-  background: #4f2ee8;
-  color: #fff;
+  background: var(--accent);
+  color: var(--white);
 }

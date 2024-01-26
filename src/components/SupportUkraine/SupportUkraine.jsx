@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import css from './SupportUkraine.module.css';
 import cn from 'classnames';
 
-import iconPrytula from 'assets/images/iconSupport/prytula.png';
-import iconAction from 'assets/images/iconSupport/action.png';
-import iconFrontieres from 'assets/images/iconSupport/fronteres.png';
-import iconHope from 'assets/images/iconSupport/hope.png';
-import iconMedical from 'assets/images/iconSupport/medical.png';
+import iconPrytula from 'assets/images/iconSupport/09-fund-1.png';
+import iconAction from 'assets/images/iconSupport/07-fund-1.png';
+import iconFrontieres from 'assets/images/iconSupport/05-fund-1.png';
+import iconHope from 'assets/images/iconSupport/02-fund-1.png';
+import iconMedical from 'assets/images/iconSupport/04-fund-1.png';
 
-import iconRazom from 'assets/images/iconSupport/razom.png';
-import iconSave from 'assets/images/iconSupport/save.png';
-import iconUnited from 'assets/images/iconSupport/united.png';
-import iconWorld from 'assets/images/iconSupport/world.png';
+import iconRazom from 'assets/images/iconSupport/06-fund-1.png';
+import iconSave from 'assets/images/iconSupport/01-fund-1.png';
+import iconUnited from 'assets/images/iconSupport/03-fund-1.png';
+import iconWorld from 'assets/images/iconSupport/08-fund-1.png';
 import iconTrident from 'assets/images/iconSupport/trident.png';
 
 import { ReactComponent as IconSkroll } from 'assets/images/iconSupport/scrol.svg';

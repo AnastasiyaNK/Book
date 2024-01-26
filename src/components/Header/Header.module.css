@@ -7,9 +7,9 @@
   align-items: center;
 
   border-radius: 0px 0px 8px 8px;
-  border: 1.5px solid #111;
+  border: 1.5px solid var(--black);
 
-  background: #fff;
+  background: var(--white);
 }
 .headerBurger {
   display: none;
@@ -24,9 +24,10 @@
 }
 .headerLogoLink {
   margin-right: 76px;
+  color: var(--black);
 }
 .headerHomeNav {
-  color: #111;
+  color: var(--black);
   font-size: 14px;
 
   font-weight: 500;
@@ -44,7 +45,7 @@
   align-items: center;
   margin-left: 24px;
   gap: 4px;
-  color: #111;
+  color: var(--black);
   font-size: 14px;
   padding: 8px 16px;
 
@@ -58,7 +59,8 @@
 .active {
   font-weight: 700;
   border-radius: 36px;
-  background: #eac645;
+  background: var(--yellow);
+  color: black;
 }
 .headerUserDrop {
   display: flex;
@@ -71,7 +73,7 @@
   border: inherit;
   padding: 4px 12px;
   border-radius: 36px;
-  background: #4f2ee8;
+  background: var(--violet);
 
   align-items: center;
 }
@@ -88,8 +90,4 @@
 .header {
   display: flex;
   width: 100%;
-}
-
-.test {
-  background-color: var(--primary);
 }

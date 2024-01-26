@@ -4,7 +4,7 @@
   top: 0;
   right: 0;
   bottom: 0;
-  background: rgba(17, 17, 17, 0.4);
+  background: var(--black-40);
 }
 
 .mainPopUpcontainer {
@@ -15,26 +15,35 @@
   max-width: 621px;
   min-height: 465px;
   border-radius: 18px;
-  border: 2px solid #111;
-  background: #fff;
+  border: 2px solid var(--black);
+  background: var(--white-800);
   padding: 40px;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.closeModal {
+.closseModalBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
   position: absolute;
   top: 16px;
   right: 0;
   transform: translateX(-50%);
   z-index: 2;
+  color: var(--black);
+  transition: all 0.3s;
 }
-.closeModal:hover,
-.closeModal:focus,
-.closeModal:active {
-  /* background: #4f2ee8; */
-  color: #4f2ee8;
+.closeModal {
+  fill: currentColor;
+}
+.closseModalBtn:hover,
+.closseModalBtn:focus,
+.closseModalBtn:active {
+  color: var(--violet);
 }
 .wrapperPopUp {
   display: flex;
@@ -54,7 +63,7 @@
 }
 
 .mainTitlePopUp {
-  color: #111;
+  color: var(--black);
   font-size: 24px;
   font-weight: 700;
   line-height: 1.16;
@@ -62,7 +71,7 @@
   margin-bottom: 8px;
 }
 .autorPopUp {
-  color: #b4afaf;
+  color: var(--grey);
   font-size: 14px;
   font-style: italic;
   font-weight: 400;
@@ -71,7 +80,7 @@
   margin-bottom: 20px;
 }
 .textPopUp {
-  color: #111;
+  color: var(--black);
 
   font-family: DM Sans;
   font-size: 14px;
@@ -84,27 +93,28 @@
 .btnPopUp {
   margin-top: 40px;
   border-radius: 40px;
-  border: 2px solid #4f2ee8;
+  border: 2px solid var(--violet);
   display: inline-block;
   width: 100%;
   padding: 20px;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  background: #fff;
+  background: var(--white);
 
-  color: #111;
+  color: var(--black);
   font-size: 18px;
   font-weight: 700;
   line-height: 1.33;
   letter-spacing: -0.18px;
   text-transform: uppercase;
   cursor: pointer;
+  transition: all 0.3s;
 }
 .btnPopUp:hover,
 .btnPopUp:focus,
 .btnPopUp:active {
-  background: #4f2ee8;
+  background: var(--violet);
   color: #fff;
 }
 .linksWrapper {
@@ -118,4 +128,16 @@
   max-height: 48px;
   object-fit: cover;
   object-position: center;
+}
+.congratulations {
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8px;
+  color: var(--black-50);
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: -0.48px;
 }
