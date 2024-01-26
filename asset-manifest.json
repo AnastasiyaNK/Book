@@ -1,13 +1,12 @@
 {
   "files": {
-    "main.css": "./static/css/main.6407fff5.css",
-    "main.js": "./static/js/main.b344b405.js",
+    "main.css": "./static/css/main.972fdb32.css",
+    "main.js": "./static/js/main.5c4af728.js",
     "static/media/imgshopping.svg": "./static/media/imgshopping.be76b4925fb9f36c5615de9db075c98f.svg",
     "static/media/indiebound.svg": "./static/media/indiebound.9c70a59c39005b5b4f659c157bb7f3ab.svg",
     "static/media/mb.svg": "./static/media/mb.88d7156197da89e9f31aa854ab6e3567.svg",
-    "static/media/maim-logo.svg": "./static/media/maim-logo.7c5e8edb5f55dd4eaf4e9abd0db1e311.svg",
-    "static/media/switcher.svg": "./static/media/switcher.cb23eceee49b38dadb2ad5e7edea46fa.svg",
-    "static/media/cart.svg": "./static/media/cart.6e31177a49d69a27d92086d7d568dc41.svg",
+    "static/media/maim-logo.svg": "./static/media/maim-logo.9640b707ead897836fd781246022889e.svg",
+    "static/media/cart.svg": "./static/media/cart.c8b0ab2656629ca47f9640c94a46b532.svg",
     "index.html": "./index.html",
     "static/media/scrol.svg": "./static/media/scrol.99e7bb59a3b5f5c7926176b2b1ee8a20.svg",
     "static/media/barnesandnoble-icon.svg": "./static/media/barnesandnoble-icon.0e388cde157e7a9c0bf0128e9d7859c3.svg",
@@ -16,12 +15,12 @@
     "static/media/user.svg": "./static/media/user.754538509c2a5f738cd66ceaee36779b.svg",
     "static/media/icons8-ibooks.svg": "./static/media/icons8-ibooks.da7f077d62773198596f2ced1366adee.svg",
     "static/media/fi-ss-caret-down.svg": "./static/media/fi-ss-caret-down.276f2dfde31543873a05b5c4ed0e6f93.svg",
-    "static/media/x-close.svg": "./static/media/x-close.a2c34c6916cfabe2420cb21d85374c20.svg",
-    "main.6407fff5.css.map": "./static/css/main.6407fff5.css.map",
-    "main.b344b405.js.map": "./static/js/main.b344b405.js.map"
+    "static/media/x-close.svg": "./static/media/x-close.c486399da06ad3d5ffe554ed214c8f97.svg",
+    "main.972fdb32.css.map": "./static/css/main.972fdb32.css.map",
+    "main.5c4af728.js.map": "./static/js/main.5c4af728.js.map"
   },
   "entrypoints": [
-    "static/css/main.6407fff5.css",
-    "static/js/main.b344b405.js"
+    "static/css/main.972fdb32.css",
+    "static/js/main.5c4af728.js"
   ]
 }
