@@ -91,3 +91,62 @@
   display: flex;
   width: 100%;
 }
+.headerBurgerBtn{
+  display: none;
+}
+
+@media screen and (max-width: 1280px) {
+
+  .headerContainer{
+      padding: 14px 32px 13px 32px;
+
+  }
+  .headerLogoLink {
+  margin-right: 40px;
+ 
+}
+   
+  }
+
+  @media screen and (max-width: 768px) {
+
+  .headerContainer{
+      padding: 18px 20px 18px 20px;
+
+  }
+  .headerLogoLink {
+  margin-right: 0;
+ 
+}
+.headerHomeNav{
+  display: none;
+}
+.headerShopListNav {
+  display: none;
+}
+.headerUserBtn{
+  display: none;
+}
+.headerUserDrop{
+  gap:14px;
+}
+.headerBurgerBtn{
+  cursor: pointer;
+  border:none;
+  padding: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+
+}
+   
+  }
+
+  
+
+
+
+
+
+

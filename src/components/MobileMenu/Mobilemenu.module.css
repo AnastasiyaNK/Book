@@ -1,0 +1,102 @@
+.mobileMenuContainer {
+  position: fixed;
+  width: 100vw;
+  height: calc(100vh - 72px) ;
+  top: 72px;
+  left: 0;
+
+  z-index: 999;
+
+  background-image: url('/public/group.png'),radial-gradient(
+    189% 190% at 59% -23%,
+    rgb(79, 46, 232) 18%,
+    rgb(255, 255, 255) 100%
+  ) ;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.mobileMenuNav {
+  display: flex;
+  flex-direction: column;
+  max-width: 167px;
+  align-items: flex-start;
+  margin: 0 auto;
+  gap: 16px;
+}
+.headerHomeNav {
+  color: var(--black);
+  font-size: 14px;
+
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.56px;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  transition: all 0.3s;
+
+  text-decoration: none;
+}
+
+.headerShopListNav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--black);
+  font-size: 14px;
+  padding: 8px 16px;
+
+  font-weight: 500;
+  line-height: 1.28;
+  letter-spacing: -0.56px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.active {
+  font-weight: 700;
+  border-radius: 36px;
+  background: var(--yellow);
+  color: black;
+}
+
+.headerUserBtn {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 120px;
+  display: flex;
+  border: inherit;
+  padding: 4px 12px;
+  border-radius: 36px;
+  background: var(--violet);
+
+  align-items: center;
+}
+.headerUserName {
+  color: #fff;
+  font-size: 22px;
+  margin-left: 9px;
+  margin-right: 4px;
+
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.44px;
+}
+
+.mobileMenuBtn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  display: inline-flex;
+  border: 1px solid var(--black);
+  border-radius: 18px;
+  background: var(--white);
+  cursor: pointer;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.04em;
+  color: var(--black);
+  padding: 15px 24px;
+}
