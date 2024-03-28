@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "./static/css/main.972fdb32.css",
-    "main.js": "./static/js/main.5c4af728.js",
+    "main.css": "./static/css/main.9d8cd842.css",
+    "main.js": "./static/js/main.f46e3a2b.js",
     "static/media/imgshopping.svg": "./static/media/imgshopping.be76b4925fb9f36c5615de9db075c98f.svg",
+    "static/media/group.png": "./static/media/group.3a5ada691f8c2ddf0154.png",
     "static/media/indiebound.svg": "./static/media/indiebound.9c70a59c39005b5b4f659c157bb7f3ab.svg",
     "static/media/mb.svg": "./static/media/mb.88d7156197da89e9f31aa854ab6e3567.svg",
     "static/media/maim-logo.svg": "./static/media/maim-logo.9640b707ead897836fd781246022889e.svg",
@@ -16,11 +17,11 @@
     "static/media/icons8-ibooks.svg": "./static/media/icons8-ibooks.da7f077d62773198596f2ced1366adee.svg",
     "static/media/fi-ss-caret-down.svg": "./static/media/fi-ss-caret-down.276f2dfde31543873a05b5c4ed0e6f93.svg",
     "static/media/x-close.svg": "./static/media/x-close.c486399da06ad3d5ffe554ed214c8f97.svg",
-    "main.972fdb32.css.map": "./static/css/main.972fdb32.css.map",
-    "main.5c4af728.js.map": "./static/js/main.5c4af728.js.map"
+    "main.9d8cd842.css.map": "./static/css/main.9d8cd842.css.map",
+    "main.f46e3a2b.js.map": "./static/js/main.f46e3a2b.js.map"
   },
   "entrypoints": [
-    "static/css/main.972fdb32.css",
-    "static/js/main.5c4af728.js"
+    "static/css/main.9d8cd842.css",
+    "static/js/main.f46e3a2b.js"
   ]
 }
