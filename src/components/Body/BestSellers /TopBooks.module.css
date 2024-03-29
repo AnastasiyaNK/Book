@@ -93,3 +93,17 @@
   background: var(--accent);
   color: var(--white);
 }
+
+@media screen and (max-width: 768px) {
+
+  .topBookContainer {
+  padding-left: 0;
+}
+ 
+ .bookList {
+  gap: 25px;
+  overflow-x: auto;
+}
+   
+
+  }

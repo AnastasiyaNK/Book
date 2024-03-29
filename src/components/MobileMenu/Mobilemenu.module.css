@@ -25,7 +25,7 @@
   gap: 16px;
 }
 .headerHomeNav {
-  color: var(--black);
+color: #fff;
   font-size: 14px;
 
   font-weight: 500;
@@ -42,7 +42,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  color: var(--black);
+color: #fff;
   font-size: 14px;
   padding: 8px 16px;
 
@@ -65,10 +65,10 @@
   margin-left: 20px;
   margin-bottom: 120px;
   display: flex;
-  border: inherit;
-  padding: 4px 12px;
-  border-radius: 36px;
-  background: var(--violet);
+ background: transparent;
+ border: none;
+
+  
 
   align-items: center;
 }
@@ -99,4 +99,6 @@
   letter-spacing: -0.04em;
   color: var(--black);
   padding: 15px 24px;
+  align-items: center;
+  gap: 4px;
 }

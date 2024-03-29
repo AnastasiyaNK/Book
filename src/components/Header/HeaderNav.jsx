@@ -8,15 +8,20 @@ import { ReactComponent as UserIcon } from 'assets/images/icons/user.svg';
 import { ReactComponent as Dropdown } from 'assets/images/icons/fi-ss-caret-down.svg';
 import { ReactComponent as Cart } from 'assets/images/icons/cart.svg';
 import { ReactComponent as BurgerIcon } from 'assets/images/icons/align-left.svg';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import * as Routes from 'helpers/constants';
 import cn from 'classnames';
 import ThemeToggle from 'components/ThemeToggle/ThemeToggle';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Mobilemenu from 'components/MobileMenu/Mobilemenu';
 
 const HeaderNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const location = useLocation()
+
+  useEffect(() => {
+    setIsMenuOpen(false)
+  }, [location]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);

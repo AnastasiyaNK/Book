@@ -13,8 +13,27 @@
   flex-direction: column;
 }
 
-@media screen and (min-width: 768px) {
-    .bodyContainer {
-      
-    }
+@media screen and (max-width: 768px) {
+  .sideBar {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
   }
+  .bodyContainer {
+    padding-left: 32px;
+    padding-right: 32px;
+    flex-direction: column;
+    gap: 100px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .sideBar {
+    flex-direction: column;
+  }
+  .bodyContainer {
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 40px;
+    
+  }
+}

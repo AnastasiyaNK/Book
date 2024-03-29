@@ -7,12 +7,12 @@ import {
   selectTopBookIsLoading,
 } from 'redux/bookShelf.selectors';
 import { useDispatch, useSelector } from 'react-redux';
-// import { ThreeDots } from 'react-loader-spinner';
 import { fetchTopBooks } from 'redux/bookShelfSlice';
 import { Link } from 'react-router-dom';
 import { openModal } from 'redux/modalSlice';
 import CardBook from 'components/CategoriesByGenre/CardBook';
 import PopUpModal from 'components/Modal/PopUpModal';
+import { useMediaQuery } from 'usehooks-ts';
 
 const TopBooks = () => {
   const dispatch = useDispatch();
@@ -20,7 +20,8 @@ const TopBooks = () => {
   const booksIsLoading = useSelector(selectTopBookIsLoading);
   const booksError = useSelector(selectTopBookError);
 
-  console.log(topBooks);
+  const isTablet = useMediaQuery('(max-width: 768px) and (min-width: 376px)');
+  const isMobile = useMediaQuery('(max-width: 375px)');
 
   const onOpenModal = bookId => {
     dispatch(openModal(bookId));
@@ -39,20 +40,7 @@ const TopBooks = () => {
   return (
     <div className={css.topBookContainer}>
       {booksError && <p>{booksError}</p>}
-      {booksIsLoading && (
-        <div className={css.loaderWrapper}>
-          {/* <ThreeDots
-            height="55"
-            width="55"
-            radius="9"
-            color="#4fa94d"
-            ariaLabel="three-dots-loading"
-            wrapperStyle={{}}
-            wrapperClassName=""
-            visible={true}
-          /> */}
-        </div>
-      )}
+      {booksIsLoading && <div className={css.loaderWrapper}></div>}
       <h1 className={css.topBookMainTitle}>
         {shortenTitle} <span>{accentedWord}</span>
       </h1>
@@ -61,28 +49,20 @@ const TopBooks = () => {
           <div key={list_name} className={css.topBookSection}>
             <h2 className={css.topBookTitle}>{list_name}</h2>
             <ul className={css.bookList}>
-              {books.map(({ book_image, author, title, _id }) => {
-                return (
-                  <CardBook
-                    onClick={onOpenModal}
-                    key={_id}
-                    bookImage={book_image}
-                    author={author}
-                    title={title}
-                    _id={_id}
-                  />
-                  // <li key={_id} className={css.bookItem}>
-                  //   <img
-                  //     className={css.bookCover}
-                  //     src={book_image}
-                  //     alt={title}
-                  //   />
-
-                  //   <h3 className={css.bookName}>{title}</h3>
-                  //   <p className={css.bookAutor}>{author}</p>
-                  // </li>
-                );
-              })}
+              {books
+                .slice(0, isTablet ? 3 : isMobile ? 1 : books.length)
+                .map(({ book_image, author, title, _id }) => {
+                  return (
+                    <CardBook
+                      onClick={onOpenModal}
+                      key={_id}
+                      bookImage={book_image}
+                      author={author}
+                      title={title}
+                      _id={_id}
+                    />
+                  );
+                })}
             </ul>
 
             <Link
