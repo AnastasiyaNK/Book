@@ -23,6 +23,13 @@ const HeaderNav = () => {
     setIsMenuOpen(false)
   }, [location]);
 
+  useEffect(() => {
+    const body = document.body; 
+    if (isMenuOpen) {
+      body.style.overflow = 'hidden'
+    }else{ body.style.overflow = 'auto'}
+  }, [isMenuOpen]);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     

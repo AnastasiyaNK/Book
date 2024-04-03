@@ -6,6 +6,7 @@ import imgAmazone from 'assets/images/icons/amazone.png';
 import { useDispatch } from 'react-redux';
 import { removeShoppingListItem } from 'redux/shoppingListSlice';
 
+
 const ShoppingListCard = ({
   title,
   author,
@@ -16,6 +17,7 @@ const ShoppingListCard = ({
   listName,
 }) => {
   const dispatch = useDispatch();
+   
 
   const onRemoveCard = () => {
     dispatch(removeShoppingListItem(_id));
@@ -24,7 +26,7 @@ const ShoppingListCard = ({
     <div>
       <div className={css.mainShopcontainer}>
         <button onClick={onRemoveCard} className={css.closeShop}>
-          <Dump />
+          <Dump className={css.dumpSvg} />
         </button>
 
         <div className={css.secondShopcontainer}>

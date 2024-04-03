@@ -20,8 +20,8 @@ const TopBooks = () => {
   const booksIsLoading = useSelector(selectTopBookIsLoading);
   const booksError = useSelector(selectTopBookError);
 
-  const isTablet = useMediaQuery('(max-width: 768px) and (min-width: 376px)');
-  const isMobile = useMediaQuery('(max-width: 375px)');
+  const isTablet = useMediaQuery('(max-width: 768px) and (min-width: 577px)');
+  const isMobile = useMediaQuery('(max-width: 576px)');
 
   const onOpenModal = bookId => {
     dispatch(openModal(bookId));

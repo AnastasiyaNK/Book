@@ -39,14 +39,25 @@
 }
 
 .closeShop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
   position: absolute;
   top: 24px;
-  right: 10px;
+  right: 2px;
   transform: translateX(-50%);
   z-index: 2;
   border: none;
   background: transparent;
   cursor: pointer;
+  padding: 0;
+}
+.dumpSvg{
+  width: 34px;
+  height: 34px;
+
 }
 .bookCover {
   height: 150px;
@@ -130,4 +141,35 @@
   display: inline-flex;
   align-items: center;
   gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .shoppListContainer {
+  margin-left: 0;
+ 
+}
+
+.textSomeBook{
+  margin-top: 100px;
+}
+
+
+}
+
+@media (max-width: 576px) {
+.mainShopcontainer{
+  padding: 14px;;
+}
+.closeShop{
+  top: 12px;
+  right: -6px;
+   width: 28px;
+  height: 28px;
+}
+.dumpSvg{
+  width: 28px;
+  height: 28px;
+
+}
+
 }
