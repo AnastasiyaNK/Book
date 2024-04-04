@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.bcb4b71e.css",
-    "main.js": "./static/js/main.e63172c2.js",
+    "main.css": "./static/css/main.bcdfd6ad.css",
+    "main.js": "./static/js/main.a75b4fca.js",
     "static/media/imgshopping.svg": "./static/media/imgshopping.be76b4925fb9f36c5615de9db075c98f.svg",
     "static/media/group.png": "./static/media/group.3a5ada691f8c2ddf0154.png",
     "static/media/indiebound.svg": "./static/media/indiebound.9c70a59c39005b5b4f659c157bb7f3ab.svg",
@@ -18,11 +18,11 @@
     "static/media/fi-ss-caret-down.svg": "./static/media/fi-ss-caret-down.276f2dfde31543873a05b5c4ed0e6f93.svg",
     "static/media/arrow-right.svg": "./static/media/arrow-right.e2a1f7f2fb0eaf97e8f132d272bcbc1f.svg",
     "static/media/x-close.svg": "./static/media/x-close.c486399da06ad3d5ffe554ed214c8f97.svg",
-    "main.bcb4b71e.css.map": "./static/css/main.bcb4b71e.css.map",
-    "main.e63172c2.js.map": "./static/js/main.e63172c2.js.map"
+    "main.bcdfd6ad.css.map": "./static/css/main.bcdfd6ad.css.map",
+    "main.a75b4fca.js.map": "./static/js/main.a75b4fca.js.map"
   },
   "entrypoints": [
-    "static/css/main.bcb4b71e.css",
-    "static/js/main.e63172c2.js"
+    "static/css/main.bcdfd6ad.css",
+    "static/js/main.a75b4fca.js"
   ]
 }
