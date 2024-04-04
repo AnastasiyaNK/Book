@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect } from 'react';
 
 import imgBook from 'assets/images/icons/icons8-ibooks.svg';
 import imgAmazone from 'assets/images/icons/amazone.png';
@@ -27,7 +27,6 @@ const getBuyLinkImg = {
   'Apple Books': imgBook,
   'Barnes and Noble': imgBarne,
   'Books-A-Million': imgMilion,
-  Bookshop: imgBarne,
   IndieBound: imgIndi,
 };
 
@@ -41,8 +40,31 @@ const PopUpModal = () => {
     el => el._id === bookDetails?._id
   );
 
-  const onClose = () => {
+  const onClose = useCallback(() => {
     dispatch(closeModal());
+  }, [dispatch]);
+
+  useEffect(() => {
+    const handleEscapeClick = event => {
+      if (event.code === 'Escape') {
+        onClose();
+      }
+    };
+    if (open) {
+      document.body.style.overflow = 'hidden';
+      window.addEventListener('keydown', handleEscapeClick);
+    }
+
+    return () => {
+      window.removeEventListener('keydown', handleEscapeClick);
+      document.body.style.overflow = 'auto';
+    };
+  }, [onClose, open]);
+
+  const handleOverClick = event => {
+    if (event.target === event.currentTarget) {
+      dispatch(closeModal());
+    }
   };
 
   const addShopingList = () => {
@@ -65,7 +87,7 @@ const PopUpModal = () => {
 
   if (!open) return null;
   return (
-    <div className={css.overlay}>
+    <div onClick={handleOverClick} className={css.overlay}>
       {bookDetails !== null && (
         <div className={css.mainPopUpcontainer}>
           <button onClick={onClose} className={css.closseModalBtn}>

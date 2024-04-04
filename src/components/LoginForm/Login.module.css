@@ -4,8 +4,7 @@
   flex-direction: column;
   gap: 28px;
 }
-.label {
-}
+
 .input {
   color: #111;
   text-transform: uppercase;
@@ -25,9 +24,9 @@
   background: #111;
   color: #f3f3f3;
   width: 499px;
-  padding: 20px 173px;
+  padding: 20px;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
   text-transform: uppercase;
   border: none;
@@ -55,4 +54,14 @@
 }
 .formLink.active {
   color: var(--violet);
+}
+
+@media (max-width: 576px) {
+  .form {
+    width: 100%;
+  }
+  .button {
+    width: 100%;
+    padding: 20px;
+  }
 }

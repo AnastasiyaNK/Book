@@ -1,8 +1,8 @@
 import React from 'react';
 import css from './ShoppingCard.module.css';
 import { ReactComponent as Dump } from 'assets/images/icons/dump.svg';
-import imgBook from 'assets/images/icons/notes.png';
-import imgAmazone from 'assets/images/icons/amazone.png';
+// import imgBook from 'assets/images/icons/notes.png';
+// import imgAmazone from 'assets/images/icons/amazone.png';
 import { useDispatch } from 'react-redux';
 import { removeShoppingListItem } from 'redux/shoppingListSlice';
 
@@ -37,7 +37,7 @@ const ShoppingListCard = ({
             <p className={css.textShop}>{description}</p>
             <div className={css.autorIconWrapper}>
               <p className={css.autorShop}>{author}</p>
-              <div className={css.iconWrapper}>
+              {/* <div className={css.iconWrapper}>
                 <img
                   width={48}
                   height={15}
@@ -52,7 +52,7 @@ const ShoppingListCard = ({
                   src={imgBook}
                   alt=""
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

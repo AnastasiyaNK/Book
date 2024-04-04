@@ -16,11 +16,13 @@ const Layout = ({ children }) => {
       <HeaderNav />
       <div
         className={cn(css.bodyContainer, {
-          [css.shoppingListPage]: location.pathname === RoutesPaths.SHOPPINGLIST_ROUTE,
+          [css.shoppingListPage]:
+            location.pathname === RoutesPaths.SHOPPINGLIST_ROUTE,
         })}
       >
         <div className={css.sideBar}>
-          {location.pathname === RoutesPaths.SHOPPINGLIST_ROUTE ? null : (
+          {location.pathname === RoutesPaths.SHOPPINGLIST_ROUTE ||
+          location.pathname === RoutesPaths.LOGIN_PAGE ? null : (
             <AllCategoryList />
           )}
           {location.pathname === RoutesPaths.SHOPPINGLIST_ROUTE &&

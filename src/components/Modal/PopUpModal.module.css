@@ -53,8 +53,6 @@
 .bookCover {
   height: 281px;
   width: 192px;
-  /* object-fit: cover;
-  object-position: center; */
 }
 
 .secondPopUpcontainer {
@@ -140,4 +138,48 @@
   font-weight: 400;
   line-height: 1.16;
   letter-spacing: -0.48px;
+}
+
+@media (max-width: 375px) {
+  .mainPopUpcontainer {
+    padding: 40px 24px;
+    max-width: 335px;
+  }
+  .secondPopUpcontainer {
+    flex-direction: column;
+  }
+  .closseModalBtn {
+    top: 10px;
+    right: -15px;
+
+  }
+
+  .bookCover {
+    height: auto;
+    width: 287px;
+    margin-bottom: 14px;
+    border-radius: 8px;
+  }
+  .mainTitlePopUp {
+    font-size: 16px;
+    line-height: 1.12;
+    margin-bottom: 4px;
+  }
+  .autorPopUp {
+    font-size: 12px;
+    line-height: 1.17;
+    margin-bottom: 18px;
+  }
+  .textPopUp {
+    margin-bottom: 14px;
+  }
+
+  .btnPopUp {
+    padding: 14px 23px;
+    font-size: 14px;
+    line-height: 1.29;
+  }
+  .wrapperPopUp {
+    margin-left: 0;
+  }
 }
